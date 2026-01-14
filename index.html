@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Keyur Gada | Ottawa & Kanata Real Estate</title>
-  <meta name="description" content="Ottawa & Kanata real estate guidance with local insight, transparency, and strong negotiation. Book a call." />
+  <meta name="description" content="Ottawa & Kanata real estate guidance with local insight, transparency, and strong negotiation. Book a call or email directly." />
+
+  <!-- Calendly Embed (Free) -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
   <style>
     :root {
@@ -39,7 +43,7 @@
     }
 
     /* NAV */
-    header { padding-bottom: 70px; }
+    header { padding-bottom: 54px; }
     .nav {
       display: flex;
       justify-content: space-between;
@@ -82,9 +86,7 @@
     }
 
     /* HERO */
-    .hero {
-      padding-top: 34px;
-    }
+    .hero { padding-top: 28px; }
 
     .hero-grid {
       display: grid;
@@ -150,13 +152,9 @@
       border-color: var(--accent);
     }
 
-    .btn-primary:hover {
-      background: rgba(255,255,255,0.98);
-    }
+    .btn-primary:hover { background: rgba(255,255,255,0.98); }
 
-    .btn-secondary {
-      background: rgba(255,255,255,0.06);
-    }
+    .btn-secondary { background: rgba(255,255,255,0.06); }
 
     .trust-points {
       list-style: none;
@@ -234,23 +232,18 @@
       line-height: 1.45;
     }
 
-    /* SECTION PLACEHOLDERS */
-    .section {
-      padding: 26px 0 0;
-    }
+    /* SECTIONS */
+    .section { padding: 26px 0 0; }
 
     .section-box {
-      margin-top: 40px;
+      margin-top: 26px;
       border: 1px solid var(--border);
       background: rgba(255,255,255,0.04);
       border-radius: 22px;
       padding: 18px;
     }
 
-    .section-box h2 {
-      margin: 0 0 10px;
-      font-size: 18px;
-    }
+    .section-box h2 { margin: 0 0 10px; font-size: 18px; }
 
     .section-box p {
       margin: 0;
@@ -267,12 +260,21 @@
 
     footer a { color: rgba(255,255,255,0.75); }
 
+    /* Calendly container polish */
+    .cal-wrap {
+      margin-top: 16px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(0,0,0,0.18);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
     /* MOBILE */
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; }
       .nav { align-items: flex-start; }
       .nav-links { justify-content: flex-start; }
-      header { padding-bottom: 48px; }
+      header { padding-bottom: 44px; }
     }
   </style>
 </head>
@@ -304,13 +306,8 @@
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary"
-             href="https://calendly.com/homesbykeyur/30min"
-             target="_blank" rel="noopener">
-            Book a 30-Min Call
-          </a>
-
-          <a class="btn btn-secondary" href="#contact">Get a Free Home Value</a>
+          <a class="btn btn-primary" href="#contact">Book a 30-Min Call</a>
+          <a class="btn btn-secondary" href="#contact">Email Me</a>
           <a class="btn btn-secondary" href="#market">View Kanata Market Update</a>
         </div>
 
@@ -324,38 +321,33 @@
           <h2>Kanata Market Update</h2>
           <p>
             I publish concise, easy-to-understand market notes for Ottawa and Kanata. If you would like the latest update,
-            book a call or message me and I’ll share the current snapshot.
+            book a call or email me and I’ll share the current snapshot.
           </p>
         </div>
       </div>
 
       <aside class="hero-card" aria-label="Booking card">
         <h2>Book a 30-Min Call</h2>
-        <p>Ask questions. Get clarity. No obligation.</p>
+        <p>Pick a time that works. You’ll receive an email confirmation after booking.</p>
 
         <div class="card-row">
-          <a class="pill"
-             href="https://calendly.com/homesbykeyur/30min"
-             target="_blank" rel="noopener">
-            Open Calendar
+          <a class="pill" href="https://calendly.com/homesbykeyur/30min" target="_blank" rel="noopener">
+            Open in Calendly
           </a>
 
-          <a class="btn btn-primary btn-full"
-             href="https://calendly.com/homesbykeyur/30min"
-             target="_blank" rel="noopener">
+          <a class="btn btn-primary btn-full" href="#contact">
             Book Now
           </a>
         </div>
 
         <p class="fineprint">
-          You’ll receive an email confirmation from Calendly. If you prefer, you can also message me from the Contact section below.
+          Prefer email? Scroll to Contact to reach me directly at homesbykeyur@gmail.com.
         </p>
       </aside>
     </div>
   </section>
 </header>
 
-<!-- Placeholder sections (you can expand later) -->
 <div class="container">
 
   <section class="section section-box" id="buy">
@@ -376,16 +368,32 @@
 
   <section class="section section-box" id="contact">
     <h2>Contact</h2>
-    <p>
-      For fastest response, book a call on Calendly:
-      <a href="https://calendly.com/homesbykeyur/30min" target="_blank" rel="noopener">calendly.com/homesbykeyur/30min</a>
+
+    <p style="margin: 0 0 12px; color: rgba(255,255,255,0.82); line-height: 1.6;">
+      Email me directly at:
+      <strong>
+        <a href="mailto:homesbykeyur@gmail.com">homesbykeyur@gmail.com</a>
+      </strong>
+    </p>
+
+    <p style="margin: 0 0 14px; color: rgba(255,255,255,0.70);">
+      Or book a <strong>30-minute call</strong> using the calendar below.
+    </p>
+
+    <div class="cal-wrap">
+      <div class="calendly-inline-widget"
+           data-url="https://calendly.com/homesbykeyur/30min"
+           style="min-width:320px;height:720px;">
+      </div>
+    </div>
+
+    <p class="fineprint" style="margin-top: 14px;">
+      You’ll receive an automatic email confirmation after booking.
     </p>
   </section>
 
   <footer>
-    <div>
-      © <span id="y"></span> Keyur Gada. All rights reserved.
-    </div>
+    <div>© <span id="y"></span> Keyur Gada. All rights reserved.</div>
     <div style="margin-top: 8px;">
       This website is for informational purposes only. Brokerage and regulatory disclosures can be added here based on your brokerage requirements.
     </div>
