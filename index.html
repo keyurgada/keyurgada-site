@@ -1,45 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Keyur Gada | Ottawa Real Estate</title>
-  <meta name="description" content="Keyur Gada – Ottawa real estate professional helping buyers, sellers, and investors with clarity and confidence." />
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-<body>
-
+<!-- Header + Hero (Above the fold) -->
 <header class="site-header">
-  <h1>Keyur Gada</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div class="container nav">
+    <a class="brand" href="/">Keyur Gada</a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#buy">Buy</a>
+      <a href="#sell">Sell</a>
+      <a href="#market">Market Update</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="eyebrow">Ottawa • Kanata • Stittsville</p>
+
+        <h1>Ottawa &amp; Kanata Real Estate Guidance You Can Trust</h1>
+
+        <p class="subhead">
+          Helping buyers and sellers make confident decisions with clear advice,
+          local insight, and strong negotiation.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Get a Free Home Value</a>
+          <a class="btn btn-secondary" href="#market">View Kanata Market Update</a>
+        </div>
+
+        <ul class="trust-points">
+          <li>Transparent, no-pressure approach</li>
+          <li>Local neighbourhood insight</li>
+          <li>Fast, consistent communication</li>
+        </ul>
+      </div>
+
+      <div class="hero-card" aria-label="Quick contact card">
+        <h2>Book a 15-Minute Call</h2>
+        <p>Send a message and I’ll reply the same day.</p>
+
+        <form class="lead-form" action="#contact" method="get">
+          <label>
+            Name
+            <input name="name" type="text" placeholder="Your name" autocomplete="name" />
+          </label>
+
+          <label>
+            Email
+            <input name="email" type="email" placeholder="you@email.com" autocomplete="email" />
+          </label>
+
+          <button class="btn btn-primary btn-full" type="submit">Start</button>
+
+          <p class="fineprint">No spam. Just a quick reply and next steps.</p>
+        </form>
+      </div>
+    </div>
+  </section>
 </header>
 
-<main class="container">
-  <section class="hero">
-    <h2>Ottawa Real Estate, Handled With Clarity</h2>
-    <p>Helping buyers, sellers, and investors make confident real estate decisions.</p>
-    <a class="btn" href="contact.html">Get in Touch</a>
-  </section>
-
-  <section>
-    <h3>Services</h3>
-    <ul>
-      <li>Buyer Representation</li>
-      <li>Seller Representation</li>
-      <li>Investment Advisory</li>
-    </ul>
-  </section>
-</main>
-
-<footer>
-  <p>© <span id="year"></span> Keyur Gada | Ottawa, Ontario</p>
-</footer>
-
-<script src="assets/js/main.js"></script>
-</body>
-</html>
+<!-- Anchor sections (so links work immediately) -->
+<section id="buy"></section>
+<section id="sell"></section>
+<section id="market"></section>
+<section id="contact"></section>
