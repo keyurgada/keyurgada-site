@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  color: #222;
+}
+
+.site-header {
+  background: #0b3a53;
+  color: white;
+  padding: 1rem;
+}
+
+.site-header nav a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.container {
+  padding: 2rem;
+}
+
+.hero {
+  background: #f4f6f8;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #0b3a53;
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 1rem;
+}
