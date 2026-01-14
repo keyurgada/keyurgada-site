@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Keyur Gada | Ottawa & Kanata Real Estate</title>
-  <meta name="description" content="Ottawa & Kanata real estate guidance with local insight, transparency, and strong negotiation. Book a 15-minute call." />
+  <meta name="description" content="Ottawa & Kanata real estate guidance with local insight, transparency, and strong negotiation. Book a call." />
 
-  <!-- INLINE CSS (NO EXTERNAL FILES) -->
   <style>
     :root {
       --bg: #0b1220;
@@ -17,6 +16,7 @@
       --btn: rgba(255,255,255,0.14);
       --btnHover: rgba(255,255,255,0.22);
       --accent: #ffffff;
+      --shadow: 0 16px 40px rgba(0,0,0,0.35);
     }
 
     * { box-sizing: border-box; }
@@ -39,31 +39,36 @@
     }
 
     /* NAV */
-    header { padding-bottom: 64px; }
+    header { padding-bottom: 70px; }
     .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 22px 0;
+      gap: 18px;
     }
 
     .brand {
-      font-weight: 700;
+      font-weight: 750;
       font-size: 18px;
       text-decoration: none;
       letter-spacing: 0.3px;
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
       gap: 18px;
       align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .nav-links a {
       text-decoration: none;
       color: var(--muted);
-      font-weight: 500;
+      font-weight: 600;
+      font-size: 14px;
     }
 
     .nav-links a:hover { color: var(--text); }
@@ -73,16 +78,17 @@
       border-radius: 14px;
       border: 1px solid var(--border);
       background: var(--panel);
+      color: var(--text);
     }
 
     /* HERO */
     .hero {
-      padding-top: 32px;
+      padding-top: 34px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.4fr 0.6fr;
+      grid-template-columns: 1.45fr 0.55fr;
       gap: 28px;
       align-items: start;
     }
@@ -90,31 +96,31 @@
     .eyebrow {
       text-transform: uppercase;
       font-size: 12px;
-      letter-spacing: 0.6px;
+      letter-spacing: 0.8px;
       color: var(--muted);
-      margin-bottom: 10px;
-      font-weight: 600;
+      margin: 0 0 10px;
+      font-weight: 700;
     }
 
     h1 {
       font-size: clamp(32px, 4vw, 46px);
-      line-height: 1.1;
-      letter-spacing: -0.3px;
-      margin-bottom: 14px;
+      line-height: 1.08;
+      letter-spacing: -0.4px;
+      margin: 0 0 14px;
     }
 
     .subhead {
       color: var(--muted);
       font-size: 16px;
-      line-height: 1.6;
-      max-width: 560px;
-      margin-bottom: 22px;
+      line-height: 1.65;
+      max-width: 62ch;
+      margin: 0 0 20px;
     }
 
     .hero-actions {
       display: flex;
       gap: 12px;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
       flex-wrap: wrap;
     }
 
@@ -124,18 +130,28 @@
       border: 1px solid var(--border);
       background: var(--btn);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      gap: 10px;
+      transition: background 0.15s ease, transform 0.15s ease;
+      will-change: transform;
     }
 
-    .btn:hover { background: var(--btnHover); }
+    .btn:hover {
+      background: var(--btnHover);
+      transform: translateY(-1px);
+    }
 
     .btn-primary {
       background: var(--accent);
       color: #0b1220;
       border-color: var(--accent);
+    }
+
+    .btn-primary:hover {
+      background: rgba(255,255,255,0.98);
     }
 
     .btn-secondary {
@@ -147,69 +163,116 @@
       padding: 0;
       margin: 0;
       display: grid;
-      gap: 8px;
+      gap: 10px;
       font-size: 14px;
       color: var(--muted);
+      max-width: 58ch;
+    }
+
+    .trust-points li {
+      position: relative;
+      padding-left: 18px;
     }
 
     .trust-points li::before {
-      content: "• ";
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
       color: var(--text);
     }
 
     /* CARD */
     .hero-card {
-      background: var(--panel);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.05));
       border: 1px solid var(--border);
-      border-radius: 20px;
+      border-radius: 22px;
       padding: 20px;
+      box-shadow: var(--shadow);
       backdrop-filter: blur(12px);
     }
 
     .hero-card h2 {
       margin: 0 0 8px;
       font-size: 18px;
+      letter-spacing: -0.1px;
     }
 
     .hero-card p {
       margin: 0 0 16px;
       font-size: 14px;
       color: var(--muted);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
-    .lead-form {
+    .card-row {
       display: grid;
-      gap: 12px;
+      gap: 10px;
+      margin-bottom: 12px;
     }
 
-    .lead-form label {
-      font-size: 12px;
-      color: var(--muted);
-      display: grid;
-      gap: 6px;
-    }
-
-    .lead-form input {
-      padding: 12px;
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 12px;
       border-radius: 14px;
       border: 1px solid var(--border);
-      background: rgba(0,0,0,0.25);
-      color: var(--text);
+      background: rgba(0,0,0,0.20);
+      color: rgba(255,255,255,0.80);
+      font-size: 12px;
+      font-weight: 650;
+      text-decoration: none;
     }
 
-    .btn-full { width: 100%; cursor: pointer; }
+    .btn-full { width: 100%; }
 
     .fineprint {
       font-size: 12px;
-      color: rgba(255,255,255,0.6);
-      margin-top: 8px;
+      color: rgba(255,255,255,0.60);
+      margin: 10px 0 0;
+      line-height: 1.45;
     }
+
+    /* SECTION PLACEHOLDERS */
+    .section {
+      padding: 26px 0 0;
+    }
+
+    .section-box {
+      margin-top: 40px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      border-radius: 22px;
+      padding: 18px;
+    }
+
+    .section-box h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .section-box p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 36px 0 30px;
+      color: rgba(255,255,255,0.62);
+      font-size: 12px;
+    }
+
+    footer a { color: rgba(255,255,255,0.75); }
 
     /* MOBILE */
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; }
-      .nav-links { gap: 12px; }
+      .nav { align-items: flex-start; }
+      .nav-links { justify-content: flex-start; }
+      header { padding-bottom: 48px; }
     }
   </style>
 </head>
@@ -233,52 +296,106 @@
       <div>
         <p class="eyebrow">Ottawa • Kanata • Stittsville</p>
 
-        <h1>Ottawa & Kanata Real Estate Guidance You Can Trust</h1>
+        <h1>Ottawa &amp; Kanata Real Estate Guidance You Can Trust</h1>
 
         <p class="subhead">
-          Helping buyers and sellers make confident decisions with clear advice,
-          local insight, and strong negotiation.
+          Helping buyers and sellers make confident decisions with clear advice, local insight,
+          and strong negotiation.
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Get a Free Home Value</a>
+          <a class="btn btn-primary"
+             href="https://calendly.com/homesbykeyur/30min"
+             target="_blank" rel="noopener">
+            Book a 30-Min Call
+          </a>
+
+          <a class="btn btn-secondary" href="#contact">Get a Free Home Value</a>
           <a class="btn btn-secondary" href="#market">View Kanata Market Update</a>
         </div>
 
         <ul class="trust-points">
           <li>Transparent, no-pressure approach</li>
-          <li>Focused on Ottawa & Kanata only</li>
-          <li>Clear communication and follow-up</li>
+          <li>Focused on Ottawa &amp; Kanata neighbourhoods</li>
+          <li>Clear communication and fast follow-up</li>
         </ul>
+
+        <div class="section section-box" id="market">
+          <h2>Kanata Market Update</h2>
+          <p>
+            I publish concise, easy-to-understand market notes for Ottawa and Kanata. If you would like the latest update,
+            book a call or message me and I’ll share the current snapshot.
+          </p>
+        </div>
       </div>
 
-      <aside class="hero-card">
-        <h2>Book a 15-Minute Call</h2>
+      <aside class="hero-card" aria-label="Booking card">
+        <h2>Book a 30-Min Call</h2>
         <p>Ask questions. Get clarity. No obligation.</p>
 
-        <form class="lead-form">
-          <label>
-            Name
-            <input type="text" placeholder="Your name" />
-          </label>
+        <div class="card-row">
+          <a class="pill"
+             href="https://calendly.com/homesbykeyur/30min"
+             target="_blank" rel="noopener">
+            Open Calendar
+          </a>
 
-          <label>
-            Email
-            <input type="email" placeholder="you@email.com" />
-          </label>
+          <a class="btn btn-primary btn-full"
+             href="https://calendly.com/homesbykeyur/30min"
+             target="_blank" rel="noopener">
+            Book Now
+          </a>
+        </div>
 
-          <button class="btn btn-primary btn-full">Start</button>
-          <p class="fineprint">No spam. Just a quick reply.</p>
-        </form>
+        <p class="fineprint">
+          You’ll receive an email confirmation from Calendly. If you prefer, you can also message me from the Contact section below.
+        </p>
       </aside>
     </div>
   </section>
 </header>
 
-<section id="buy"></section>
-<section id="sell"></section>
-<section id="market"></section>
-<section id="contact"></section>
+<!-- Placeholder sections (you can expand later) -->
+<div class="container">
+
+  <section class="section section-box" id="buy">
+    <h2>Buying in Ottawa / Kanata</h2>
+    <p>
+      I help buyers understand neighbourhoods, pricing, conditions, and negotiation strategy—so you can move confidently
+      without pressure or confusion.
+    </p>
+  </section>
+
+  <section class="section section-box" id="sell">
+    <h2>Selling with a Clear Plan</h2>
+    <p>
+      From pricing strategy to preparing the home and positioning online, I focus on transparency, strong presentation,
+      and disciplined negotiation.
+    </p>
+  </section>
+
+  <section class="section section-box" id="contact">
+    <h2>Contact</h2>
+    <p>
+      For fastest response, book a call on Calendly:
+      <a href="https://calendly.com/homesbykeyur/30min" target="_blank" rel="noopener">calendly.com/homesbykeyur/30min</a>
+    </p>
+  </section>
+
+  <footer>
+    <div>
+      © <span id="y"></span> Keyur Gada. All rights reserved.
+    </div>
+    <div style="margin-top: 8px;">
+      This website is for informational purposes only. Brokerage and regulatory disclosures can be added here based on your brokerage requirements.
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
